@@ -88,32 +88,35 @@ struct WiggleAnimation: GeometryEffect {
 //MARK: Preview -
 #Preview {
     StatefulPreview(CGFloat.zero) { attempts in
-        VStack(alignment: .leading, spacing: 40) {
-            Text("Horizontal Wiggle Example")
-                .wiggle(animatableData: attempts.wrappedValue)
-            
-            Text("Vertical Wiggle Example")
-                .wiggle(animatableData: attempts.wrappedValue, direction: .vertical)
-            
-            Text("Large Distance Wiggle Example")
-                .wiggle(animatableData: attempts.wrappedValue, distance: 80)
-            
-            Text("Large amount of Wiggle Example")
-                .wiggle(animatableData: attempts.wrappedValue, shakesPerUnit: 40)
-            
-            Button {
-                withAnimation(.default) {
-                    attempts.wrappedValue += 1
+        NavigationStack {
+            VStack(alignment: .leading, spacing: 40) {
+                Text("Horizontal Wiggle Example")
+                    .wiggle(animatableData: attempts.wrappedValue)
+                
+                Text("Vertical Wiggle Example")
+                    .wiggle(animatableData: attempts.wrappedValue, direction: .vertical)
+                
+                Text("Large Distance Wiggle Example")
+                    .wiggle(animatableData: attempts.wrappedValue, distance: 80)
+                
+                Text("Large amount of Wiggle Example")
+                    .wiggle(animatableData: attempts.wrappedValue, shakesPerUnit: 40)
+                
+                Button {
+                    withAnimation(.default) {
+                        attempts.wrappedValue += 1
+                    }
+                } label: {
+                    Text("Wiggle")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(.black, in: .rect(cornerRadius: 10))
+                        .foregroundStyle(.white)
+                       
                 }
-            } label: {
-                Text("Wiggle")
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(.black, in: .rect(cornerRadius: 10))
-                    .foregroundStyle(.white)
-                   
             }
+            .padding(.horizontal)
+            .navigationTitle("Wiggle Effect")
         }
-        .padding(.horizontal)
     }
 }
