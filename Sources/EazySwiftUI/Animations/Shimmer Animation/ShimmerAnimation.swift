@@ -56,7 +56,7 @@ struct ShimmerEffectModifier: ViewModifier {
             .overlay { // Adds an overlay to the content view.
                 Rectangle()
                     .fill(color)
-                    .mask { content } // Masks the content view with a rectangle filled with the base color.
+                    .mask { content } // Masks the content view with a rectangle filled with the base colour.
                     .overlay { // Creates the shimmer effect overlay.
                         GeometryReader { proxy in
                             let size = proxy.size
