@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  ExtensionCGSize.swift
 //  EazySwiftUI
 //
 //  Created by Leon Salvatore on 30.04.2025.
