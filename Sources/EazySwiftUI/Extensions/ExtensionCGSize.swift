@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public extension CGCGSize {
+public extension CGSize {
     /// A set of predefined common `CGSize` values for various use cases.
 
     // MARK: - Generic Sizes
